@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.iTech.com/employee/portal">
+    <xs:element name="Employees">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="Employee"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Employee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="age"/>
+                <xs:element ref="fname"/>
+                <xs:element ref="lname"/>
+                <xs:element ref="address" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="id" type="xs:nonNegativeInteger" nillable="false" />
+    <xs:element name="age" type="xs:nonNegativeInteger" nillable="false"/>
+    <xs:element name="fname" type="xs:string" nillable="false"/>
+    <xs:element name="lname" type="xs:string" nillable="false"/>
+    <xs:element name="address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="line1" />
+                <xs:element ref="line2"/>
+                <xs:element ref="state"/>
+                <xs:element ref="zipcode"/>
+                <xs:element ref="country"/>
+                <xs:element ref="phone"/>
+                <xs:element ref="email"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="line1" type="xs:string" />
+    <xs:element name="line2" type="xs:string" />
+    <xs:element name="state" type="xs:string" />
+    <xs:element name="zipcode" type="xs:string" />
+    <xs:element name="country" type="xs:string" />
+    <xs:element name="phone" type="xs:string" />
+    <xs:element name="email" type="xs:string" />
+        
+</xs:schema>
